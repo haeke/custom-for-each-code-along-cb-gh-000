@@ -12,5 +12,5 @@ var dogs = [
 ];
 
 for ( let i = 0; i < dogs.length; i++) {
-  console.log(i);
+  console.log(dogs[0]);
 }
