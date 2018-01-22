@@ -1,16 +1,14 @@
 
-var dogs = [
-  {
-    name: 'fido', age: 3,
-  },
-  {
-    name: 'odie', age: 5,
-  },
-  {
-    name: 'ralph', age: 7,
+funcion forEach(iterable, callback) {
+  if (Array.isArray(iterable)) {
+    for (let i = 0; i < iterable.length; i++) {
+      const element = iterable[i];
+      callback(element, i, iterable);
+    }
+  } else if (typeof iterable === 'object') {
+    for (const key in iterable) {
+      const value = iterable[key];
+      callback(value, key, iterable);
+    }
   }
-];
-
-for ( let i = 0; i < dogs.length; i++) {
-  console.log(dogs[i]);
 }
